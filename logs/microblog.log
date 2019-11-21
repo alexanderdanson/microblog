@@ -50,3 +50,4 @@ jinja2.exceptions.UndefinedError: 'wtf' is undefined
 2019-11-21 14:57:41,378 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
 2019-11-21 15:00:16,553 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
 2019-11-21 15:01:28,071 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 16:24:42,331 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:49]
