@@ -1,4 +1,4 @@
-2019-11-17 00:27:18,327 ERROR: Exception on /user/Alex [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-11-17 00:55:53,992 ERROR: Exception on /index [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 77, in user
-    return render_template('user.html', user=user, posts=posts)
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 27, in index
+    return render_template('index.html', title='Home Page', form=form, posts=posts)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
     ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
@@ -32,8 +32,8 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\user.html", line 15, in template
-    {% elif %}
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\index.html", line 19, in template
+    {% end if %}
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 497, in _parse
     return Parser(self, source, name, encode_filename(filename)).parse()
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 901, in parse
@@ -50,10 +50,18 @@ Traceback (most recent call last):
     rv = self.parse_statement()
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
     return getattr(self, 'parse_' + self.stream.current.value)()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 211, in parse_if
-    node.test = self.parse_tuple(with_condexpr=False)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 637, in parse_tuple
-    describe_token(self.stream.current))
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 212, in parse_if
+    node.body = self.parse_statements(('name:elif', 'name:else',
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 144, in parse_statement
+    self.fail_unknown_tag(token.value, token.lineno)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 97, in fail_unknown_tag
+    return self._fail_ut_eof(name, self._end_token_stack, lineno)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 90, in _fail_ut_eof
+    self.fail(' '.join(message), lineno)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 59, in fail
     raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Expected an expression, got 'end of statement block'
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
