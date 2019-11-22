@@ -1,4 +1,4 @@
-2019-11-21 14:42:54,762 ERROR: Exception on /edit_profile [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-11-21 14:47:18,389 ERROR: Exception on /login [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +12,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 100, in edit_profile
-    form=form)
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 51, in login
+    return render_template('login.html', title='Sign In', form=form)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
@@ -28,11 +26,12 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 3, in top-level template code
-    {% extends "base.html" %}
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\login.html", line 3, in top-level template code
+    {% extends 'base.html' %}
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 16, in root
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\login.html", line 16, in root
+    {% endblock %}
   File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 16, in root
     <span class="icon-bar"></span>
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
@@ -42,11 +41,23 @@ Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
   File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 82, in block_content
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 26, in block_app_content
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\login.html", line 27, in block_app_content
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'wtf' is undefined
-2019-11-21 14:43:44,642 ERROR: Exception on /edit_profile [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-11-21 14:47:49,002 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 14:55:02,893 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 14:57:41,378 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 15:00:16,553 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 15:01:28,071 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+2019-11-21 16:24:42,331 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:49]
+2019-11-22 15:39:48,411 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:49]
+2019-11-22 15:43:46,598 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:49]
+2019-11-22 18:31:35,456 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:51]
+2019-11-22 21:33:48,474 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:34:10,298 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:35:17,200 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:35:29,133 ERROR: Exception on /login [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -56,44 +67,43 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 100, in edit_profile
-    form=form)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2241, in preprocess_request
+    rv = func()
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 16, in before_request
+    g.locale = str(get_locale())
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py", line 58, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'request' is not defined
+2019-11-22 21:35:31,214 ERROR: Exception on / [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 3, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1005, in render
-    return concat(self.root_render_func(self.new_context(vars)))
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 16, in root
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 16, in root
-    <span class="icon-bar"></span>
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
-    {% block body -%}
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 82, in block_content
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\edit_profile.html", line 26, in block_app_content
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wtf' is undefined
-2019-11-21 14:43:52,910 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
-2019-11-21 14:45:47,396 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
-2019-11-21 14:46:45,462 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:47]
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2241, in preprocess_request
+    rv = func()
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\routes.py", line 16, in before_request
+    g.locale = str(get_locale())
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py", line 58, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'request' is not defined
+2019-11-22 21:36:10,777 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:37:37,551 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:38:41,714 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:51:26,526 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:51:44,522 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:52:23,144 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:52:39,418 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 21:55:20,447 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
