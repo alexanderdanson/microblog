@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-11-22 22:08+0100\n"
+"POT-Creation-Date: 2019-11-26 08:03+0100\n"
 "PO-Revision-Date: 2019-11-22 22:08+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: se\n"
@@ -38,7 +38,7 @@ msgstr "Lösenord"
 msgid "Remember Me"
 msgstr "Kom ihåg mig"
 
-#: app/forms.py:11 app/routes.py:53 app/templates/login.html:7
+#: app/forms.py:11 app/routes.py:59 app/templates/login.html:7
 msgid "Sign In"
 msgstr "Logga in"
 
@@ -50,7 +50,7 @@ msgstr "Email"
 msgid "Repeat Password"
 msgstr "Upprepa lösenord"
 
-#: app/forms.py:18 app/routes.py:73 app/templates/register.html:7
+#: app/forms.py:18 app/routes.py:79 app/templates/register.html:7
 msgid "Register"
 msgstr "Registrera"
 
@@ -78,72 +78,80 @@ msgstr "Säg något"
 msgid "Request Password Reset"
 msgstr "Begära nytt lösenord"
 
-#: app/routes.py:27
+#: app/routes.py:33
 msgid "Your post is now live!"
 msgstr "Ditt inlägg är nu live!"
 
-#: app/routes.py:35 app/templates/base.html:24
+#: app/routes.py:41 app/templates/base.html:24
 msgid "Home"
 msgstr "Hem"
 
-#: app/routes.py:40 app/routes.py:63
+#: app/routes.py:46 app/routes.py:69
 msgid "Already logged in"
 msgstr "Redan inloggad"
 
-#: app/routes.py:46
+#: app/routes.py:52
 msgid "Invalid username or password"
 msgstr "Ogiltigt användarnamn eller lösenord"
 
-#: app/routes.py:71
+#: app/routes.py:77
 msgid "Congratulations, you are now a registered user!"
 msgstr "Grattis, du är nu en registrerad användare!"
 
-#: app/routes.py:96
+#: app/routes.py:102
 msgid "Your changes have been saved."
 msgstr "Dina ändringar har sparats"
 
-#: app/routes.py:101 app/templates/edit_profile.html:7
+#: app/routes.py:107 app/templates/edit_profile.html:7
 msgid "Edit Profile"
 msgstr "Redigera profil"
 
-#: app/routes.py:109 app/routes.py:124
+#: app/routes.py:115 app/routes.py:130
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Användare %(username)s hittades inte."
 
-#: app/routes.py:112
+#: app/routes.py:118
 msgid "You cannot follow yourself!"
 msgstr "Du kan inte följa dig själv!"
 
-#: app/routes.py:116
+#: app/routes.py:122
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Du följer %(username)s!"
 
-#: app/routes.py:127
+#: app/routes.py:133
 msgid "You cannot unfollow yourself!"
 msgstr "Du kan inte sluta följa dig själv!"
 
-#: app/routes.py:131
+#: app/routes.py:137
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Du följer inte %(username)s."
 
-#: app/routes.py:143 app/templates/base.html:25
+#: app/routes.py:149 app/templates/base.html:25
 msgid "Explore"
 msgstr "Utforska"
 
-#: app/routes.py:154
+#: app/routes.py:160
 msgid "Check your email for the instructions to reset your password"
 msgstr "Kolla dit mail för instruktioner om hur du kan återställa ditt lösenord"
 
-#: app/routes.py:157 app/templates/reset_password_request.html:7
+#: app/routes.py:163 app/templates/reset_password_request.html:7
 msgid "Reset Password"
 msgstr "Återställ lösenord"
 
-#: app/routes.py:170
+#: app/routes.py:176
 msgid "Your password has been reset."
 msgstr "Ditt lösenord har återställts"
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr "Fel: Översättningstjänsten är inte konfigurerad"
+
+#: app/translate.py:16
+msgid "Error: the translation service failed."
+msgstr "Fel: Översättningstjänsten mislyckades"
 
 #: app/templates/404.html:5
 msgid "File Not Found"
@@ -166,6 +174,10 @@ msgstr "Administratören har notifierats. Ursäkta besväret!"
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s sa %(when)s"
 
+#: app/templates/_post.html:27
+msgid "Translate"
+msgstr "Översätt"
+
 #: app/templates/base.html:7
 msgid "Welcome to Microblog"
 msgstr "Välkommen till Microblog"
@@ -181,6 +193,10 @@ msgstr "Profil"
 #: app/templates/base.html:32
 msgid "Logout"
 msgstr "Logga ut"
+
+#: app/templates/base.html:69
+msgid "Error: Could not contact server."
+msgstr "Fel: Kunde inte kontakta servern"
 
 #: app/templates/index.html:7
 #, python-format
