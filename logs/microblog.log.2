@@ -1,72 +1,4 @@
-2019-11-28 14:01:41,959 ERROR: Exception on /favicon.ico [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1925, in dispatch_request
-    self.raise_routing_exception(req)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
-    raise request.routing_exception
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\werkzeug\routing.py", line 1799, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
-    return handler(e)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\errors\handlers.py", line 7, in not_found_error
-    return render_template('errors/404.html'), 404
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\errors\404.html", line 2, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1005, in render
-    return concat(self.root_render_func(self.new_context(vars)))
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\errors\404.html", line 16, in root
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 16, in root
-    <span class="icon-bar"></span>
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
-    {% block body -%}
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 89, in block_content
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\errors\404.html", line 27, in block_app_content
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\runtime.py", line 262, in call
-    return __obj(*args, **kwargs)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2019-11-28 14:06:00,545 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:74]
-2019-11-28 14:06:05,059 ERROR: Exception on / [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-11-28 14:08:29,732 ERROR: Exception on /index [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -99,3 +31,63 @@ Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\werkzeug\routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2019-11-28 14:09:25,813 ERROR: Exception on /user/Alex [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\main\routes.py", line 54, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\user.html", line 3, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\user.html", line 16, in root
+    {% elif not current_user.is_following(user) %}
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 16, in root
+    <span class="icon-bar"></span>
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
+    {% block body -%}
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 89, in block_content
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\user.html", line 55, in block_app_content
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2019-11-28 14:12:38,754 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:74]

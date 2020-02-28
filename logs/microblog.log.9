@@ -1,23 +1,5 @@
-2019-11-22 21:59:02,764 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:00:47,492 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:01:07,155 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:05:04,391 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:08:39,113 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:18:50,920 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:19:18,144 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:20:24,135 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:21:05,677 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:21:38,399 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:24:49,654 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 22:25:03,390 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:06:41,845 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:29:30,215 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:33:45,695 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:34:24,582 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:35:04,900 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:37:14,750 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:38:52,356 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:38:57,294 ERROR: Exception on /index [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-11-22 23:47:41,888 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 23:49:48,594 ERROR: Exception on /index [GET] [in C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -47,8 +29,8 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\_post.html", line 29, in template
-    {{ endif }}
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\index.html", line 4, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
   File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\index.html", line 19, in root
@@ -62,41 +44,16 @@ Traceback (most recent call last):
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
   File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 92, in block_body
   File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\base.html", line 89, in block_content
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\index.html", line 45, in block_app_content
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\_post.html", line 29, in template
-    {{ endif }}
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 212, in parse_if
-    node.body = self.parse_statements(('name:elif', 'name:else',
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 170, in parse_statements
-    self.fail_eof(end_tokens)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 104, in fail_eof
-    return self._fail_ut_eof(None, stack, lineno)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 90, in _fail_ut_eof
-    self.fail(' '.join(message), lineno)
-  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
-2019-11-22 23:39:23,575 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:40:41,313 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:42:21,304 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
-2019-11-22 23:43:01,660 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\index.html", line 46, in block_app_content
+  File "C:\Users\alexander.danson\Documents\GitHub\microblog\app\templates\_post.html", line 38, in root
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\alexander.danson\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'hasattr' is undefined
+2019-11-22 23:50:40,544 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 23:52:46,178 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-22 23:54:21,066 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-26 08:03:45,098 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-26 08:06:22,227 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:52]
+2019-11-28 13:22:14,526 INFO: Microblog startup [in C:\Users\alexander.danson\Documents\GitHub\microblog\app\__init__.py:74]
